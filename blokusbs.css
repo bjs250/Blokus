@@ -67,6 +67,16 @@
     }
 */
 
+#game_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#board {
+    width: 320px;
+    height: 320px;
+    background-image: url('img/board.jpg');
+ }
 
 

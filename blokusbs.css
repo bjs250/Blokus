@@ -77,6 +77,13 @@
     width: 320px;
     height: 320px;
     background-image: url('img/board.jpg');
- }
+    position: relative;
+}
 
-
+.square {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-color: red;
+    border-color:black;
+}

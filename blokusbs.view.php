@@ -77,7 +77,28 @@ class view_blokusbs_blokusbs extends game_view
         
         */
 
+        $this->page->begin_block( "blokusbs_blokusbs", "square" );
+        
+        $board_width = 320;
 
+        // Board dimensions are 20 x 20
+        $square_width = $board_width / 20;
+        
+        $horizontal_offset = 0;
+        $vertical_offset = 0;
+
+        for( $x=1; $x<=20; $x++ )
+        {
+            for( $y=1; $y<=20; $y++ )
+            {
+                $this->page->insert_block( "square", array(
+                    'X' => $x,
+                    'Y' => $y,
+                    'LEFT' => round( ($x-1) * $square_width + $horizontal_offset ),
+                    'TOP' => round( ($y-1) * $square_width + $vertical_offset )
+                ) );
+            }        
+        }
 
         /*********** Do not change anything below this line  ************/
   	}
